@@ -32,6 +32,7 @@ namespace CSharpCalculator
         public MainWindow()
         {
             InitializeComponent();
+            //text1.Text = "Clear input on calculation: off";
         }
 
         private void ButtonAddName_Click(object sender, RoutedEventArgs e)
@@ -102,18 +103,18 @@ namespace CSharpCalculator
             txtNumberTwo.Clear();
         }
 
-        private void ButtonClearInputOnName_Click(object sender, RoutedEventArgs e)
+        private void ToggleClearInputOnName_Click(object sender, RoutedEventArgs e)
         {
             ClearInput = true;
             //ClearInputToggleIndicator();
-            text.Text = "On";
+            text2.Text = "Clear input on calculation: on";
         }
 
-        private void ButtonClearInputOffName_Click(object sender, RoutedEventArgs e)
+        private void ToggleClearInputOffName_Click(object sender, RoutedEventArgs e)
         {
             ClearInput = false;
             //ClearInputToggleIndicator();
-            text.Text = "Off";
+            text2.Text = "Clear input on calculation: off";
         }
         /*
         private void ClearInputToggleIndicator()

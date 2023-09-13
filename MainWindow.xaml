@@ -24,19 +24,19 @@
         <StackPanel Grid.Row="1" Grid.Column="1" Margin="5,0,0,0">
             <TextBox x:Name="txtNumberOne" />
             <TextBox x:Name="txtNumberTwo" Margin="0,5,0,0"/>
-            
+
             <Button x:Name="btnAdd" Margin="0,20,0,0" Click="ButtonAddName_Click">Addition</Button>
             <Button x:Name="btnSubtract" Margin="0,10,0,0" Click="ButtonSubtractName_Click">Subtraction</Button>
             <Button x:Name="btnMultiply" Margin="0,10,0,0" Click="ButtonMultiplyName_Click">Multiplication</Button>
             <Button x:Name="btnDivide" Margin="0,10,0,0" Click="ButtonDivideName_Click">Division</Button>
-            
+
             <Button x:Name="btnClearResults" Margin="0,30,0,0" Click="ButtonClearResultsName_Click">Clear</Button>
             <Button x:Name="btnClearAll" Margin="0,15,0,0" Click="ButtonClearAllName_Click">Clear All</Button>
-
-            <Button x:Name="btnClearInputOn" Margin="0,20,0,0" Click="ButtonClearInputOnName_Click">Clear Input On</Button>
-            <Button x:Name="btnClearInputOff" Margin="0,7,0,0" Click="ButtonClearInputOffName_Click">Clear Input Off</Button>
-            <TextBlock x:Name = "text" Margin = "83,0,0,0" Width = "100" HorizontalAlignment = "Center" />
             
+            <ToggleButton x:Name = "tb" Checked = "ToggleClearInputOnName_Click" Unchecked = "ToggleClearInputOffName_Click" Margin = "20" Width = "200" HorizontalAlignment = "Center" >
+                <TextBlock x:Name = "text2" Width = "200" HorizontalAlignment = "Center" />
+            </ToggleButton>
+
         </StackPanel>
 
 
