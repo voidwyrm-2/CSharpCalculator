@@ -105,11 +105,13 @@ namespace CSharpCalculator
         private void ButtonClearInputOnName_Click(object sender, RoutedEventArgs e)
         {
             ClearInput = true;
+            text.Text = "On";
         }
 
         private void ButtonClearInputOffName_Click(object sender, RoutedEventArgs e)
         {
             ClearInput = false;
+            text.Text = "Off";
         }
     }
 }

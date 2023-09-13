@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CSharpCalculator"
         mc:Ignorable="d"
-        Title="C# Calculator" Height="400" Width="520">
+        Title="C# Calculator" Height="430" Width="520">
     <Grid Margin="10">
 
         <Grid.RowDefinitions>
@@ -35,6 +35,8 @@
 
             <Button x:Name="btnClearInputOn" Margin="0,20,0,0" Click="ButtonClearInputOnName_Click">Clear Input On</Button>
             <Button x:Name="btnClearInputOff" Margin="0,7,0,0" Click="ButtonClearInputOffName_Click">Clear Input Off</Button>
+            <TextBlock x:Name = "text" Margin = "83,0,0,0" Width = "100" HorizontalAlignment = "Center" />
+            
         </StackPanel>
 
 
