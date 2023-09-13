@@ -1,0 +1,42 @@
+﻿<Window x:Class="CSharpCalculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CSharpCalculator"
+        mc:Ignorable="d"
+        Title="C# Calculator" Height="400" Width="520">
+    <Grid Margin="10">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label>Calculator</Label>
+        <ListBox Grid.Row="1" x:Name="lstResults" />
+
+        <StackPanel Grid.Row="1" Grid.Column="1" Margin="5,0,0,0">
+            <TextBox x:Name="txtNumberOne" />
+            <TextBox x:Name="txtNumberTwo" Margin="0,5,0,0"/>
+            
+            <Button x:Name="btnAdd" Margin="0,20,0,0" Click="ButtonAddName_Click">Addition</Button>
+            <Button x:Name="btnSubtract" Margin="0,10,0,0" Click="ButtonSubtractName_Click">Subtraction</Button>
+            <Button x:Name="btnMultiply" Margin="0,10,0,0" Click="ButtonMultiplyName_Click">Multiplication</Button>
+            <Button x:Name="btnDivide" Margin="0,10,0,0" Click="ButtonDivideName_Click">Division</Button>
+            
+            <Button x:Name="btnClearResults" Margin="0,30,0,0" Click="ButtonClearResultsName_Click">Clear</Button>
+            <Button x:Name="btnClearAll" Margin="0,15,0,0" Click="ButtonClearAllName_Click">Clear All</Button>
+
+            <Button x:Name="btnClearInputOn" Margin="0,20,0,0" Click="ButtonClearInputOnName_Click">Clear Input On</Button>
+            <Button x:Name="btnClearInputOff" Margin="0,7,0,0" Click="ButtonClearInputOffName_Click">Clear Input Off</Button>
+        </StackPanel>
+
+
+    </Grid>
+</Window>
