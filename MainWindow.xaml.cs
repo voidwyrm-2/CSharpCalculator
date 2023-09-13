@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using BakeryLibrary;
+//using static BakeryLibrary.Main;
 
 namespace CSharpCalculator
 {
@@ -25,10 +27,10 @@ namespace CSharpCalculator
 
         public bool ClearInput = false;
 
-        public int AdditionResults;
-        public int SubtractResults;
-        public int MultiplyResults;
-        public int DivideResults;
+        //public int AdditionResults;
+        //public int SubtractResults;
+        //public int MultiplyResults;
+        //public int DivideResults;
         public MainWindow()
         {
             InitializeComponent();
@@ -39,8 +41,8 @@ namespace CSharpCalculator
         {
             if (!string.IsNullOrWhiteSpace(txtNumberOne.Text)/* && !lstResults.Items.Contains(txtNumberOne.Text)*/)
             {
-                AdditionResults = Convert.ToInt32(txtNumberOne.Text) + Convert.ToInt32(txtNumberTwo.Text);
-                lstResults.Items.Add(AdditionResults);
+                //AdditionResults = Convert.ToInt32(txtNumberOne.Text) - Convert.ToInt32(txtNumberTwo.Text);
+                lstResults.Items.Add( Main.IntAdd(Convert.ToInt32(txtNumberOne.Text), Convert.ToInt32(txtNumberTwo.Text)) );
                 if (ClearInput)
                 {
                     txtNumberOne.Clear();
@@ -53,8 +55,8 @@ namespace CSharpCalculator
         {
             if (!string.IsNullOrWhiteSpace(txtNumberOne.Text))
             {
-                AdditionResults = Convert.ToInt32(txtNumberOne.Text) - Convert.ToInt32(txtNumberTwo.Text);
-                lstResults.Items.Add(AdditionResults);
+                //AdditionResults = Convert.ToInt32(txtNumberOne.Text) - Convert.ToInt32(txtNumberTwo.Text);
+                lstResults.Items.Add( Main.IntSub(Convert.ToInt32(txtNumberOne.Text), Convert.ToInt32(txtNumberTwo.Text)) );
                 if (ClearInput)
                 {
                     txtNumberOne.Clear();
@@ -67,8 +69,8 @@ namespace CSharpCalculator
         {
             if (!string.IsNullOrWhiteSpace(txtNumberOne.Text))
             {
-                AdditionResults = Convert.ToInt32(txtNumberOne.Text) * Convert.ToInt32(txtNumberTwo.Text);
-                lstResults.Items.Add(AdditionResults);
+                //AdditionResults = Convert.ToInt32(txtNumberOne.Text) * Convert.ToInt32(txtNumberTwo.Text);
+                lstResults.Items.Add( Main.IntMul(Convert.ToInt32(txtNumberOne.Text), Convert.ToInt32(txtNumberTwo.Text)) );
                 if (ClearInput)
                 {
                     txtNumberOne.Clear();
@@ -81,8 +83,8 @@ namespace CSharpCalculator
         {
             if (!string.IsNullOrWhiteSpace(txtNumberOne.Text))
             {
-                AdditionResults = Convert.ToInt32(txtNumberOne.Text) / Convert.ToInt32(txtNumberTwo.Text);
-                lstResults.Items.Add(AdditionResults);
+                //AdditionResults = Convert.ToInt32(txtNumberOne.Text) / Convert.ToInt32(txtNumberTwo.Text);
+                lstResults.Items.Add( Main.IntDiv(Convert.ToInt32(txtNumberOne.Text), Convert.ToInt32(txtNumberTwo.Text)) );
                 if (ClearInput)
                 {
                     txtNumberOne.Clear();

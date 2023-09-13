@@ -5,6 +5,17 @@
     <TargetFramework>net7.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>lib\one.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="lib\one.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="BakeryLibrary">
+      <HintPath>lib\BakeryLibrary.dll</HintPath>
+    </Reference>
+  </ItemGroup>
 
 </Project>
