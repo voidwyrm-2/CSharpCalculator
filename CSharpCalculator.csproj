@@ -9,12 +9,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="lib\one.ico" />
+    <Compile Remove="lib\**" />
+    <EmbeddedResource Remove="lib\**" />
+    <None Remove="lib\**" />
+    <Page Remove="lib\**" />
   </ItemGroup>
 
   <ItemGroup>
     <Reference Include="BakeryLibrary">
-      <HintPath>lib\BakeryLibrary.dll</HintPath>
+      <HintPath>..\BakeryLibrary\bin\Debug\net7.0\BakeryLibrary.dll</HintPath>
     </Reference>
   </ItemGroup>
 

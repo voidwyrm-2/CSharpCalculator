@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using BakeryLibrary;
-//using static BakeryLibrary.Main;
+//using static BakeryLibrary.Baker;
 
 namespace CSharpCalculator
 {
@@ -39,10 +39,11 @@ namespace CSharpCalculator
 
         private void ButtonAddName_Click(object sender, RoutedEventArgs e)
         {
+
             if (!string.IsNullOrWhiteSpace(txtNumberOne.Text)/* && !lstResults.Items.Contains(txtNumberOne.Text)*/)
             {
                 //AdditionResults = Convert.ToInt32(txtNumberOne.Text) - Convert.ToInt32(txtNumberTwo.Text);
-                lstResults.Items.Add( Main.IntAdd(Convert.ToInt32(txtNumberOne.Text), Convert.ToInt32(txtNumberTwo.Text)) );
+                lstResults.Items.Add( Baker.IntAdd(Convert.ToInt32(txtNumberOne.Text), Convert.ToInt32(txtNumberTwo.Text)) );
                 if (ClearInput)
                 {
                     txtNumberOne.Clear();
@@ -53,6 +54,7 @@ namespace CSharpCalculator
 
         private void ButtonSubtractName_Click(object sender, RoutedEventArgs e)
         {
+            /*
             if (!string.IsNullOrWhiteSpace(txtNumberOne.Text))
             {
                 //AdditionResults = Convert.ToInt32(txtNumberOne.Text) - Convert.ToInt32(txtNumberTwo.Text);
@@ -63,6 +65,14 @@ namespace CSharpCalculator
                     txtNumberTwo.Clear();
                 }
             }
+            */
+            lstResults.Items.Add(IntToPower(2, 2));
+        }
+
+        public static int IntToPower(int w, int x)
+        {
+            //return (w * w) * x;
+            return (w * x) * x;
         }
 
         private void ButtonMultiplyName_Click(object sender, RoutedEventArgs e)
@@ -70,7 +80,7 @@ namespace CSharpCalculator
             if (!string.IsNullOrWhiteSpace(txtNumberOne.Text))
             {
                 //AdditionResults = Convert.ToInt32(txtNumberOne.Text) * Convert.ToInt32(txtNumberTwo.Text);
-                lstResults.Items.Add( Main.IntMul(Convert.ToInt32(txtNumberOne.Text), Convert.ToInt32(txtNumberTwo.Text)) );
+                lstResults.Items.Add( Baker.IntMul(Convert.ToInt32(txtNumberOne.Text), Convert.ToInt32(txtNumberTwo.Text)) );
                 if (ClearInput)
                 {
                     txtNumberOne.Clear();
@@ -84,7 +94,7 @@ namespace CSharpCalculator
             if (!string.IsNullOrWhiteSpace(txtNumberOne.Text))
             {
                 //AdditionResults = Convert.ToInt32(txtNumberOne.Text) / Convert.ToInt32(txtNumberTwo.Text);
-                lstResults.Items.Add( Main.IntDiv(Convert.ToInt32(txtNumberOne.Text), Convert.ToInt32(txtNumberTwo.Text)) );
+                lstResults.Items.Add( Baker.IntDiv(Convert.ToInt32(txtNumberOne.Text), Convert.ToInt32(txtNumberTwo.Text)) );
                 if (ClearInput)
                 {
                     txtNumberOne.Clear();
@@ -92,6 +102,17 @@ namespace CSharpCalculator
                 }
             }
         }
+
+        /*
+        private void ButtonRandomName_Click(object sender, RoutedEventArgs e)
+        {
+            var rand = new Random();
+            int w = Convert.ToInt32(txtNumberOne.Text);
+            int x = Convert.ToInt32(txtNumberTwo.Text);
+            int i = rand.Next(1, 10000);
+            lstResults.Items.Add(Convert.ToString(i));
+        }
+        */
 
         private void ButtonClearResultsName_Click(object sender, RoutedEventArgs e)
         {
@@ -118,21 +139,22 @@ namespace CSharpCalculator
             //ClearInputToggleIndicator();
             text2.Text = "Clear input on calculation: off";
         }
+
         /*
-        private void ClearInputToggleIndicator()
-        {
-            //while (ClearInput || !ClearInput)
-            //{}
-            if(ClearInput)
-            {
-                text.Text = "On";
-            }
-            else if(!ClearInput)
-            {
-                text.Text = "Off";
-            }
-        }
-        */
+private void ClearInputToggleIndicator()
+{
+   //while (ClearInput || !ClearInput)
+   //{}
+   if(ClearInput)
+   {
+       text.Text = "On";
+   }
+   else if(!ClearInput)
+   {
+       text.Text = "Off";
+   }
+}
+*/
 
     }
 }
